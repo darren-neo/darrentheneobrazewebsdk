@@ -184,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     User ID:
     <input id="change_user_text" type="text" name="userid">
-    <button id="change_user_button">Submit</button> <button id= "logout_button" style="display:none">Logout</button><br />
+    <button id="change_user_button" onclick="dataLayer.push({'event' : 'trigger_changeUser'});>Submit</button> <button id= "logout_button" style="display:none">Logout</button><br />
     <br />
 
     First Name:
@@ -269,7 +269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <input id="properties" type="text" name="optionaleventproperties"><br />
     <br />
 
-    <button id="event_button">Submit</button><br />
+    <button id="event_button" onclick="dataLayer.push({'event' : 'log_customE'});>Submit</button><br />
     <br />
 
   </div>
