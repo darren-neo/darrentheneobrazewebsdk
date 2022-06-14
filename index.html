@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <title>Sethboy</title>
+  <style>
+
+    body {background-color: powderblue;}
+  .specialButton
+  {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+  }
+  .holding
+  {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align:  right; 
+  }
+
+/*  h1
+  {
+      -webkit-animation: color-change 1s infinite;
+      -moz-animation: color-change 1s infinite;
+      -o-animation: color-change 1s infinite;
+      -ms-animation: color-change 1s infinite;
+      animation: color-change 1s infinite;
+  }*/
+
+  @-webkit-keyframes color-change
+  {
+      0% { color: red; }
+      20% { color: blue; }
+      40% { color: yellow; }
+      60% { color: orange; }
+      80% { color: green; }
+      100% { color: red; }
+  }
+  @-moz-keyframes color-change
+  {
+      0% { color: red; }
+      20% { color: blue; }
+      40% { color: yellow; }
+      60% { color: orange; }
+      80% { color: green; }
+      100% { color: red; }
+  }
+  @-ms-keyframes color-change
+  {
+      0% { color: red; }
+      20% { color: blue; }
+      40% { color: yellow; }
+      60% { color: orange; }
+      80% { color: green; }
+      100% { color: red; }
+  }
+  @-o-keyframes color-change
+  {
+      0% { color: red; }
+      20% { color: blue; }
+      40% { color: yellow; }
+      60% { color: orange; }
+      80% { color: green; }
+      100% { color: red; }
+  }
+  @keyframes color-change
+  {
+      0% { color: red; }
+      20% { color: blue; }
+      40% { color: yellow; }
+      60% { color: orange; }
+      80% { color: green; }
+      100% { color: red; }
+  }
+
+</style>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="custom.css" />
+  <script type="text/javascript">
+  +function(a,p,P,b,y){a.appboy={};a.appboyQueue=[];for(var s="DeviceProperties BrazeSdkMetadata BrazeSdkMetadata.GOOGLE_TAG_MANAGER BrazeSdkMetadata.MPARTICLE BrazeSdkMetadata.SEGMENT BrazeSdkMetadata.TEALIUM BrazeSdkMetadata.NPM BrazeSdkMetadata.CDN BrazeSdkMetadata.MANUAL Card Card.prototype.dismissCard Card.prototype.removeAllSubscriptions Card.prototype.removeSubscription Card.prototype.subscribeToClickedEvent Card.prototype.subscribeToDismissedEvent Card.fromContentCardsJson Banner CaptionedImage ClassicCard ControlCard ContentCards ContentCards.prototype.getUnviewedCardCount Feed Feed.prototype.getUnreadCardCount ControlMessage InAppMessage InAppMessage.SlideFrom InAppMessage.ClickAction InAppMessage.DismissType InAppMessage.OpenTarget InAppMessage.ImageStyle InAppMessage.Orientation InAppMessage.TextAlignment InAppMessage.CropType InAppMessage.prototype.closeMessage InAppMessage.prototype.removeAllSubscriptions InAppMessage.prototype.removeSubscription InAppMessage.prototype.subscribeToClickedEvent InAppMessage.prototype.subscribeToDismissedEvent InAppMessage.fromJson FullScreenMessage ModalMessage HtmlMessage HtmlMessage.SlideFrom SlideUpMessage User User.Genders User.NotificationSubscriptionTypes User.prototype.addAlias User.prototype.addToCustomAttributeArray User.prototype.addToSubscriptionGroup User.prototype.getUserId User.prototype.incrementCustomUserAttribute User.prototype.removeFromCustomAttributeArray User.prototype.removeFromSubscriptionGroup User.prototype.setAvatarImageUrl User.prototype.setCountry User.prototype.setCustomLocationAttribute User.prototype.setCustomUserAttribute User.prototype.setDateOfBirth User.prototype.setEmail User.prototype.setEmailNotificationSubscriptionType User.prototype.setFirstName User.prototype.setGender User.prototype.setHomeCity User.prototype.setLanguage User.prototype.setLastKnownLocation User.prototype.setLastName User.prototype.setPhoneNumber User.prototype.setPushNotificationSubscriptionType InAppMessageButton InAppMessageButton.prototype.removeAllSubscriptions InAppMessageButton.prototype.removeSubscription InAppMessageButton.prototype.subscribeToClickedEvent display display.automaticallyShowNewInAppMessages display.destroyFeed display.hideContentCards display.showContentCards display.showFeed display.showInAppMessage display.toggleContentCards display.toggleFeed changeUser destroy getDeviceId initialize isPushBlocked isPushGranted isPushPermissionGranted isPushSupported logCardClick logCardDismissal logCardImpressions logContentCardsDisplayed logCustomEvent logFeedDisplayed logInAppMessageButtonClick logInAppMessageClick logInAppMessageHtmlClick logInAppMessageImpression logPurchase openSession registerAppboyPushMessages removeAllSubscriptions removeSubscription requestContentCardsRefresh requestFeedRefresh requestImmediateDataFlush resumeWebTracking enableSDK isDisabled setLogger setSdkAuthenticationSignature addSdkMetadata stopWebTracking disableSDK subscribeToContentCardsUpdates subscribeToFeedUpdates subscribeToInAppMessage subscribeToNewInAppMessages subscribeToSdkAuthenticationFailures toggleAppboyLogging trackLocation unregisterAppboyPushMessages wipeData".split(" "),i=0;i<s.length;i++){for(var m=s[i],k=a.appboy,l=m.split("."),j=0;j<l.length-1;j++)k=k[l[j]];k[l[j]]=(new Function("return function "+m.replace(/\./g,"_")+"(){window.appboyQueue.push(arguments); return true}"))()}window.appboy.getCachedContentCards=function(){return new window.appboy.ContentCards};window.appboy.getCachedFeed=function(){return new window.appboy.Feed};window.appboy.getUser=function(){return new window.appboy.User};(y=p.createElement(P)).type='text/javascript';
+    y.src='https://js.appboycdn.com/web-sdk/3.5/appboy.min.js';
+    y.async=1;(b=p.getElementsByTagName(P)[0]).parentNode.insertBefore(y,b)
+  }(window,document,'script');
+
+  appboy.initialize('8f9a1ae0-61a8-4f36-a69c-4d21d658084d', { 
+    baseUrl: "https://sondheim.braze.com",
+    allowUserSuppliedJavascript: true,
+    requireExplicitInAppMessageDismissal: true,
+    openInAppMessagesInNewTab: true,
+  });
+  appboy.display.automaticallyShowNewInAppMessages();
+
+
+  /*
+   * If you have a unique identifier for this user (e.g. they are logged into your site) it's a good idea to call
+   * changeUser here.
+   * See https://js.appboycdn.com/web-sdk/3.5/doc/modules/appboy.html#changeuser for more information.
+   */
+  // appboy.changeUser(userIdentifier);
+
+  appboy.openSession();
+</script>
+</head>
+
+<body>
+<h1>Darren's Web SDK Demo Site</h1>
+  <h3>Adapted from Seth Tilliss Production</h3>
+
+  <br />
+
+<div> 
+  Current User: <output type="text" id="loggedIn" style="opacity:0.5;color:red">Not signed In
+</div>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Hey There!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Welcome to my Braze Web SDK Integration Tutorial.
+          <br />
+          <br />
+          –Get started by integrating methods into the JavaScript file in this folder titled script.js (PAY CLOSE ATTENTION TO THE COMMENTS).
+          <br />
+          <br />
+          -If you get stuck, there is an answer key file in the folder.
+          <br />
+          <br />
+          –The documentation for the methods, as well as the real-time user search dashboard, are linked on this page.
+          <br />
+          <br />
+          –When using the actual HTML site, make sure to submit a User ID (inside user attributes) before you do anything else!
+
+
+
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <br />
+
+  <button class="specialButton" onclick="user()">Set User Attributes</button>
+  <br />
+  <br />
+
+  <div id="user" style="display:none">
+
+    User ID:
+    <input id="change_user_text" type="text" name="userid">
+    <button id="change_user_button">Submit</button> <button id= "logout_button" style="display:none">Logout</button><br />
+    <br />
+
+    First Name:
+    <input id="fn_text" type="text" name="firstname">
+    <button id="fn_button">Submit</button><br />
+    <br />
+
+    Last Name:
+    <input id="ln_text" type="text" name="lastname">
+    <button id="ln_button">Submit</button><br />
+    <br />
+
+    Email Address:
+    <input id="email_text" type="email" name="emailaddress">
+    <button id="email_button">Submit</button><br />
+    <br />
+
+    Gender:
+    <select id="gender" name="gender">
+      <option value="m">Male</option>
+      <option value="f">Female</option>
+      <option value="o">Other</option>
+      <option value="u">Unknown</option>
+      <option value="n">Not Applicable</option>
+      <option value="p">Prefer Not To Answer</option>
+    </select>
+    <button id="gender_button">Submit</button><br />
+    <br />
+
+    Birthday:
+    <input id="birthday" type="date" name="birthday">
+    <button id="birthday_button">Submit</button><br />
+    <br />
+
+    Country:
+    <input id="country_text" type="text" name="country">
+    <button id="country_button">Submit</button><br />
+    <br />
+
+    Home City:
+    <input id="home_city_text" type="text" name="homecity">
+    <button id="home_city_button">Submit</button><br />
+    <br />
+
+    Phone Number:
+    <input id="phone_number_text" type="text" name="phonenumber">
+    <button id="phone_number_button">Submit</button><br />
+    <br />
+
+  </div>
+
+  <button class="specialButton" onclick="customA()">Set Custom Attributes</button>
+  <br />
+  <br />
+
+  <div id="customA" style="display:none">
+
+    Attribute Name:
+    <input id="attribute_name" type="text" name="attributename"><br />
+    <br />
+
+    Attribute Value:
+    <input id="attribute_value" type="text" name="attributevalue"><br />
+    <br />
+
+    <button id="attribute_button">Submit</button><br />
+    <br />
+
+  </div>
+
+  <button class="specialButton" onclick="customE()">Log Custom Events</button>
+  <br />
+  <br />
+
+  <div id="customE" style="display:none">
+
+    Event Name:
+    <input id="event_name" type="text" name="eventname"><br />
+    <br />
+
+    [Optional] Event Properties (JSON):
+    <input id="properties" type="text" name="optionaleventproperties"><br />
+    <br />
+
+    <button id="event_button">Submit</button><br />
+    <br />
+
+  </div>
+
+  <button class="specialButton" onclick="purchases()">Log Purchases</button>
+  <br />
+
+  <div id="purchases" style="display:none">
+
+    <br />
+    Product ID:
+    <input id="product_id" type="text" name="productid"><br />
+    <br />
+
+    [Optional] Currency:
+    <input id="currency" type="text" name="currency"><br />
+    <br />
+
+    Price:
+    <input id="price" type="number" name="price"><br />
+    <br />
+
+    [Optional] Quantity:
+    <input id="quantity" type="number" name="quantity"><br />
+    <br />
+
+    <button id="log_purchase_button">Submit</button><br />
+    <br />
+
+  </div>
+
+  <!--
+<h2 style="color:green;">Push</h2>
+
+  <button id="register">Register for Push</button>
+  <button id="unregister">Unregister for Push</button>
+  <br />
+  <br />
+ -->
+
+  <br />
+  <button id="test_button" type="button" class="btn btn-primary" data-toggle="modal" data-target="#testModal">
+    Test It!
+  </button>
+
+  <div class="modal fade" id="testModal" tabindex="-1" role="dialog" aria-labelledby="testModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="testModalLabel">User Attribute Results</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h2 id="answer"></h2>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src=" https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<script type="text/javascript" src="script.js"></script>
+<script>
+  $('#myModal').on('shown.bs.modal', function() {
+    $('#myInput').trigger('focus')
+  })
+</script>
+
+</html>
