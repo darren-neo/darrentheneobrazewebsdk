@@ -153,9 +153,10 @@ appboy.getUser().setPhoneNumber(phoneNumber);
 document.getElementById("attribute_button").addEventListener("click", function(){
   attributeName = document.getElementById("attribute_name").value;
   attributeValue = document.getElementById("attribute_value").value;
-
+  dataLayer.push({'brazeAttribute' : attributeName});
+  dataLayer.push({'brazeAttributeValue': attributeValue});
   // TODO ADD CODE HERE
-appboy.getUser().setCustomUserAttribute(attributeName, attributeValue);
+//appboy.getUser().setCustomUserAttribute(attributeName, attributeValue);
 });
 
 //CUSTOM EVENTS
@@ -184,7 +185,13 @@ document.getElementById("log_purchase_button").addEventListener("click", functio
   quantity = document.getElementById("quantity").value;
 
   // TODO ADD CODE HERE
-  appboy.logPurchase(productId, price, currencyCode, quantity);
+  //appboy.logPurchase(productId, price, currencyCode, quantity);
+  dataLayer.push({
+    'brazeProduct': productId,
+    'brazeCurrency': currencyCode,
+    'brazePrice': price,
+    'brazeQuantity': quantity
+  })
 });
 
 
