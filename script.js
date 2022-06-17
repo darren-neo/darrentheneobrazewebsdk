@@ -153,8 +153,10 @@ appboy.getUser().setPhoneNumber(phoneNumber);
 document.getElementById("attribute_button").addEventListener("click", function(){
   attributeName = document.getElementById("attribute_name").value;
   attributeValue = document.getElementById("attribute_value").value;
-  dataLayer.push({'brazeAttribute' : attributeName});
-  dataLayer.push({'brazeAttributeValue': attributeValue});
+  dataLayer.push({
+    'brazeAttribute' : attributeName,
+    'brazeAttributeValue' : attributeValue
+  });
   // TODO ADD CODE HERE
 //appboy.getUser().setCustomUserAttribute(attributeName, attributeValue);
 });
