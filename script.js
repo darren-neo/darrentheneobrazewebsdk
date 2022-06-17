@@ -165,7 +165,7 @@ document.getElementById("event_button").addEventListener("click", function(){
   eventProperties = document.getElementById("properties").value;
   dataLayer.push({'brazeEvent' : eventName});
   if (eventProperties === "") {
-
+  //  dataLayer.push({'event': eventName});
     // TODO ADD CODE HERE
   //appboy.logCustomEvent(eventName);
   } else {
