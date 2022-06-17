@@ -171,7 +171,7 @@ document.getElementById("event_button").addEventListener("click", function(){
   } else {
 	// TODO ADD CODE HERE
   //appboy.logCustomEvent(eventName,JSON.parse(eventProperties));
-    dataLayer.push({'event': evenName})
+    dataLayer.push({'event': eventName})
   }
 });
 
