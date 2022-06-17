@@ -21,12 +21,13 @@ document.getElementById("change_user_button").addEventListener("click", function
   //TIP: THE ABOVE LINE IS ASSIGNING THE VALUE IN THE USER ID TEXT BOX TO THE LOCAL VARIABLE userId
   //This is done for every input field
   // TODO ADD CODE HERE.  Pass the userID variable into the change user method
-  appboy.changeUser(userId);
+  dataLayer.push({'brazeChangeUser' : userId});
+  console.log("Change user attempted");
   //Displays logged-in user for current session
-  document.getElementById("loggedIn").value = userId
+  document.getElementById("loggedIn").value = userId;
   document.getElementById("loggedIn").style = "color:green;fontWeight:900";
   //Display logout button after logged in
-  document.getElementById("logout_button").style = "display:inline"
+  document.getElementById("logout_button").style = "display:inline";
 });
 
 //Logout button
@@ -162,14 +163,15 @@ appboy.getUser().setCustomUserAttribute(attributeName, attributeValue);
 document.getElementById("event_button").addEventListener("click", function(){
   eventName = document.getElementById("event_name").value;
   eventProperties = document.getElementById("properties").value;
+  dataLayer.push({'brazeEvent' : eventName});
   if (eventProperties === "") {
 
     // TODO ADD CODE HERE
-  appboy.logCustomEvent(eventName);
+  //appboy.logCustomEvent(eventName);
   } else {
-
-  	// TODO ADD CODE HERE
-  appboy.logCustomEvent(eventName,JSON.parse(eventProperties));
+	// TODO ADD CODE HERE
+  //appboy.logCustomEvent(eventName,JSON.parse(eventProperties));
+    dataLayer.push({'event': evenName})
   }
 });
 
