@@ -21,7 +21,9 @@ document.getElementById("change_user_button").addEventListener("click", function
   //TIP: THE ABOVE LINE IS ASSIGNING THE VALUE IN THE USER ID TEXT BOX TO THE LOCAL VARIABLE userId
   //This is done for every input field
   // TODO ADD CODE HERE.  Pass the userID variable into the change user method
-  dataLayer.push({'brazeChangeUser' : userId});
+  dataLayer.push({
+	  'event' : 'trigger_changeUser',
+	  'brazeChangeUser' : userId});
   console.log("Change user attempted");
   //Displays logged-in user for current session
   document.getElementById("loggedIn").value = userId;
