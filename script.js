@@ -23,7 +23,7 @@ document.getElementById("change_user_button").addEventListener("click", function
   // TODO ADD CODE HERE.  Pass the userID variable into the change user method
   dataLayer.push({
 	  'event' : 'trigger_changeUser',
-	  'brazeChangeUser' : userId})
+	  'brazeUserId' : userId})
   console.log("Change user attempted");
   //Displays logged-in user for current session
   document.getElementById("loggedIn").value = userId;
@@ -31,7 +31,7 @@ document.getElementById("change_user_button").addEventListener("click", function
   //Display logout button after logged in
   document.getElementById("logout_button").style = "display:inline";
 });
-appboy.requestImmediateDataFlush();
+appboy.requestImmediateDataFlush()
 
 //Logout button
 //Reloads the page to clear all fields
@@ -157,7 +157,7 @@ document.getElementById("attribute_button").addEventListener("click", function()
   attributeName = document.getElementById("attribute_name").value;
   attributeValue = document.getElementById("attribute_value").value;
   dataLayer.push({  
-    'event': 'log_customA',
+    'event' : 'log_customA',
     'brazeAttribute' : attributeName,
     'brazeAttributeValue' : attributeValue
   })
@@ -173,15 +173,16 @@ document.getElementById("event_button").addEventListener("click", function(){
   eventProperties = document.getElementById("properties").value;
   if (eventProperties === "") {
   dataLayer.push({
-	  'event': 'log_customE',
+	  'event' : 'log_customE',
   	  'brazeEvent' : eventName
-  })
+ 	 })
     // TODO ADD CODE HERE
   //appboy.logCustomEvent(eventName);
   } else {
+  
 	// TODO ADD CODE HERE
   //appboy.logCustomEvent(eventName,JSON.parse(eventProperties));
-    }
+  }
 });
 appboy.requestImmediateDataFlush()
 
