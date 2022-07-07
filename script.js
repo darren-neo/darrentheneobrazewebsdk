@@ -19,8 +19,7 @@ document.getElementById("change_user_button").addEventListener("click", function
 
   userId = document.getElementById("change_user_text").value;
   //TIP: THE ABOVE LINE IS ASSIGNING THE VALUE IN THE USER ID TEXT BOX TO THE LOCAL VARIABLE userId
-  //This is done for every input field
-  // TODO ADD CODE HERE.  Pass the userID variable into the change user method
+  // TODO ADD CODE HERE.  Pass the userID variable into the GTM method
   dataLayer.push({
 	  'event' : 'trigger_changeUser',
 	  'brazeUserId' : userId
