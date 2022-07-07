@@ -171,7 +171,6 @@ appboy.requestImmediateDataFlush();
 document.getElementById("event_button").addEventListener("click", function(){
   eventName = document.getElementById("event_name").value;
   eventProperties = document.getElementById("properties").value;
-  dataLayer.push({'brazeEvent' : eventName});
   if (eventProperties === "") {
   //  dataLayer.push({'event': eventName});
     // TODO ADD CODE HERE
@@ -179,7 +178,10 @@ document.getElementById("event_button").addEventListener("click", function(){
   } else {
 	// TODO ADD CODE HERE
   //appboy.logCustomEvent(eventName,JSON.parse(eventProperties));
-    dataLayer.push({'event': eventName})
+    dataLayer.push({
+    	'event': log_customE,
+	'brazeEvent' : brazeEvent	   
+    });
   }
 });
 appboy.requestImmediateDataFlush()
@@ -194,14 +196,15 @@ document.getElementById("log_purchase_button").addEventListener("click", functio
 
   // TODO ADD CODE HERE
   //appboy.logPurchase(productId, price, currencyCode, quantity);
-  dataLayer.push({
+  dataLayer.push({ 
+    'event' : 'log_purchase',
     'brazeProduct': productId,
     'brazeCurrency': currencyCode,
     'brazePrice': price,
     'brazeQuantity': quantity
   })
 });
-appboy.requestImmediateDataFlush()
+appboy.requestImmediateDataFlush();
 
 //IGNORE EVERYTHING BELOW! IT IS SIMPLY RESPONSIBLE FOR BUTTON FUNCTION AND TESTING
 function user()
