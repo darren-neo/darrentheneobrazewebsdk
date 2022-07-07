@@ -23,7 +23,8 @@ document.getElementById("change_user_button").addEventListener("click", function
   // TODO ADD CODE HERE.  Pass the userID variable into the change user method
   dataLayer.push({
 	  'event' : 'trigger_changeUser',
-	  'brazeUserId' : userId})
+	  'brazeUserId' : userId
+  })
   console.log("Change user attempted");
   //Displays logged-in user for current session
   document.getElementById("loggedIn").value = userId;
