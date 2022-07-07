@@ -31,7 +31,7 @@ document.getElementById("change_user_button").addEventListener("click", function
   //Display logout button after logged in
   document.getElementById("logout_button").style = "display:inline";
 });
-appboy.requestImmediateDataFlush()
+appboy.requestImmediateDataFlush();
 
 //Logout button
 //Reloads the page to clear all fields
@@ -156,14 +156,15 @@ appboy.getUser().setPhoneNumber(phoneNumber);
 document.getElementById("attribute_button").addEventListener("click", function(){
   attributeName = document.getElementById("attribute_name").value;
   attributeValue = document.getElementById("attribute_value").value;
-  dataLayer.push({
+  dataLayer.push({  
+    'event': 'log_customA',
     'brazeAttribute' : attributeName,
     'brazeAttributeValue' : attributeValue
   });
   // TODO ADD CODE HERE
 //appboy.getUser().setCustomUserAttribute(attributeName, attributeValue);
 });
-appboy.requestImmediateDataFlush()
+appboy.requestImmediateDataFlush();
 
 //CUSTOM EVENTS
 
