@@ -29,6 +29,7 @@ document.getElementById("change_user_button").addEventListener("click", function
   //Display logout button after logged in
   document.getElementById("logout_button").style = "display:inline";
 });
+appboy.requestImmediateDataFlush()
 
 //Logout button
 //Reloads the page to clear all fields
@@ -160,6 +161,7 @@ document.getElementById("attribute_button").addEventListener("click", function()
   // TODO ADD CODE HERE
 //appboy.getUser().setCustomUserAttribute(attributeName, attributeValue);
 });
+appboy.requestImmediateDataFlush()
 
 //CUSTOM EVENTS
 
@@ -177,6 +179,7 @@ document.getElementById("event_button").addEventListener("click", function(){
     dataLayer.push({'event': eventName})
   }
 });
+appboy.requestImmediateDataFlush()
 
 //LOG PURCHASES
 
@@ -195,7 +198,7 @@ document.getElementById("log_purchase_button").addEventListener("click", functio
     'brazeQuantity': quantity
   })
 });
-
+appboy.requestImmediateDataFlush()
 
 //IGNORE EVERYTHING BELOW! IT IS SIMPLY RESPONSIBLE FOR BUTTON FUNCTION AND TESTING
 function user()
