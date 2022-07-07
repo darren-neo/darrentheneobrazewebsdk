@@ -172,17 +172,16 @@ document.getElementById("event_button").addEventListener("click", function(){
   eventName = document.getElementById("event_name").value;
   eventProperties = document.getElementById("properties").value;
   if (eventProperties === "") {
-  //  dataLayer.push({'event': eventName});
+  dataLayer.push({
+	  'event': log_customE,
+  	  'brazeEvent' : eventName
+  })
     // TODO ADD CODE HERE
   //appboy.logCustomEvent(eventName);
   } else {
 	// TODO ADD CODE HERE
   //appboy.logCustomEvent(eventName,JSON.parse(eventProperties));
-    dataLayer.push({
-    	'event': log_customE,
-	'brazeEvent' : brazeEvent	   
-    })
-  }
+    }
 });
 appboy.requestImmediateDataFlush()
 
