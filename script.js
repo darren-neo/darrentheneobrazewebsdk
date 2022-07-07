@@ -173,7 +173,7 @@ document.getElementById("event_button").addEventListener("click", function(){
   eventProperties = document.getElementById("properties").value;
   if (eventProperties === "") {
   dataLayer.push({
-	  'event': log_customE,
+	  'event': 'log_customE',
   	  'brazeEvent' : eventName
   })
     // TODO ADD CODE HERE
