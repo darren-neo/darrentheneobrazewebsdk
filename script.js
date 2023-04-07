@@ -206,6 +206,12 @@ document.getElementById("log_purchase_button").addEventListener("click", functio
 });
 appboy.requestImmediateDataFlush();
 
+document.getElementById("requestPush").addEventListener("click", function(){
+  dataLayer.push({
+    'event' : 'request_PushPermission'
+  })
+}); 
+
 //IGNORE EVERYTHING BELOW! IT IS SIMPLY RESPONSIBLE FOR BUTTON FUNCTION AND TESTING
 function user()
 {
