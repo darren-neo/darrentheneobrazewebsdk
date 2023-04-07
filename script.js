@@ -207,7 +207,7 @@ document.getElementById("log_purchase_button").addEventListener("click", functio
 appboy.requestImmediateDataFlush();
 
 document.getElementById("requestPush").addEventListener("click", function(){
-braze.requestPushPermission()
+braze.requestPushPermission();
 }); 
 
 //IGNORE EVERYTHING BELOW! IT IS SIMPLY RESPONSIBLE FOR BUTTON FUNCTION AND TESTING
