@@ -209,6 +209,7 @@ appboy.requestImmediateDataFlush();
 document.getElementById("requestPush").addEventListener("click", function(){
 braze.requestPushPermission();
 }); 
+console.log('push request');
 
 //IGNORE EVERYTHING BELOW! IT IS SIMPLY RESPONSIBLE FOR BUTTON FUNCTION AND TESTING
 function user()
