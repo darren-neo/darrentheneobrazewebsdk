@@ -86,6 +86,13 @@ document.getElementById("email_button").addEventListener("click", function(){
 appboy.getUser().setEmail(email);
 });
 
+//Set user to subscribe
+document.getElementById("subscribe_button").addEventListener("click", function(){
+dataLayer.push({  
+    'event' : 'setUserAsSubscribed'
+  })
+});
+
 //Gender
 document.getElementById("gender_button").addEventListener("click", function(){
   var x = document.getElementById("gender");
