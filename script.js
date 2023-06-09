@@ -88,7 +88,7 @@ appboy.getUser().setEmail(email);
 
 //Set user to subscribe
 document.getElementById("subscribe_button").addEventListener("click", function(){
-dataLayer.push({  
+  dataLayer.push({
     'event' : 'setUserAsSubscribed'
   })
 });
